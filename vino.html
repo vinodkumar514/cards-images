@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vertical Navigation bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+   ul{
+            display:none;
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            width:200px;
+            background-color:teal;
+        
+        }
+        li a{
+            display:block;
+            padding:25px;
+            color:yellow;
+            display:none;
+        }
+        li a.active{
+            background-color:teal;
+            color:thistle;
+            display:block;
+        }
+        ul li a:hover:active{
+          display: block
+        }
+        li a:hover:not(.active){
+            background-color:violet;
+            color:thistle;
+          display:none; 
+        }
+        li a:hover:not(.active){
+
+            text-align:center;
+            border:1px solid blue;
+            
+        }
+        li{
+          display:none
+        }
+        .mystyle:hover{
+          
+            display:block
+          
+          
+        }
+        
+        </style>        
+    </head>
+    <button onclick="myfun()">clickme</button>
+  <ul Id="demo">
+
+    
+      <li id="helloworld"><a class="active" href="vinod"><i class="fa fa-address-book-o" style="font-size:16px"></i>vinod</a></li>
+      <li><i class="fa fa-address-book-o" style="font-size:16px"></i><a href= "basha" <big>ammer</big></a></li>
+      <li><i class="fa fa-address-book-o" style="font-size:16px"></i><a href="manoj"><big>chenna</big></a></li>
+      <li><i class="fa fa-address-book-o" style="font-size:16px"></i><a href="anil"><big>harsha</big></a></li>
+      <li><i class="fa fa-address-book-o" style="font-size:16px"></i><a href="srikanth"><big>murali</big></a></li>
+  </ul>
+  </body>
+<script>
+function myfun(){
+  var v=document.getElementById("demo")
+  
+  if(v.style.display==="none"){
+    v.style.display="block"
+    v.children[0].style.display="block"
+    
+    if(v.children[0].className.hover){
+      document.getElementById("helloworld").className="mystyle"
+      console.log("basha")
+      for(var i=1;i<v.children[0].length;i++){
+      v.getElementsByClassName("li")[i].style.display="block"
+    }for(var i=1;i<v.children[0].length;i++){
+      v.getElementsByClassName("li")[i].style.display="block"
+    }
+    }
+    
+   
+  }else{
+    v.style.display="none"
+  }
+}
+
+</script>
+</html>
